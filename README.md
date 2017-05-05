@@ -1,7 +1,7 @@
 # cheeseclaw
 Game Library
 
-#Classes
+# Classes
 
 claw::Claw -- memory owner model
 
@@ -33,7 +33,7 @@ claw::Physical
 
 claw::Updater
 
-#Style
+# Style
 
 Egyptian Brackets
 
