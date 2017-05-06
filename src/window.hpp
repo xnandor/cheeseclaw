@@ -1,12 +1,17 @@
 
 #include <SDL.h>
 
+#if defined(__APPLE__) && defined(__MACH__)
+#include <OpenGL/gl.h>
+#else
+#include <GL/gl.h>
+#endif
+
 #ifndef WINDOW_H
 #define WINDOW_H
 
 namespace claw {
   
-
   class Window {
   public:
     SDL_Window* HWindow;
@@ -16,8 +21,6 @@ namespace claw {
   public:
     Window();
     void Init();
-      
-
   };
 
 }

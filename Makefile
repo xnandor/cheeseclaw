@@ -10,6 +10,15 @@ CXX=clang++
 CXXFLAGS=
 LIBS=-lSDL2
 
+# MacOs Specifics
+OS=$(shell uname)
+ifeq ($(OS), Darwin)
+FRAMEWORKS=-framework OpenGL
+else
+FRAMEWORKS=
+endif
+
+# Emacs Build System
 EMACS-BUILD-FROM-SRC=make -C ../ build
 EMACS-RUN-FROM-SRC=../bin/cheeseclaw
 #-------------------------------------------------------------------------------------
@@ -23,6 +32,6 @@ run: build
 build: $(PROGPATH)
 
 $(PROGPATH): $(SOURCEFILES)
-	$(CXX) $(CXXFLAGS) -I$(INC) -L$(LIB) $(LIBS) $^ -o $@
+	$(CXX) $(CXXFLAGS) -I$(INC) -L$(LIB) $(LIBS) $(FRAMEWORKS) $^ -o $@
 
 

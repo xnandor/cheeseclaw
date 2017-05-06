@@ -6,7 +6,6 @@ namespace claw {
   Window::Window() : DefaultWidth(640), DefaultHeight(480) {
     HWindow = NULL;
     HSurface = NULL;
-    Init();
   }
 
   void Window::Init() {
@@ -28,12 +27,12 @@ namespace claw {
     SDL_UpdateWindowSurface(HWindow);
     SDL_Delay(5000);
   }
-    
 
 }
 
-int main(int argc, char** argv) {
+int main() {
   claw::Window* window = new claw::Window();
+  window->Init();
 };
 
 
