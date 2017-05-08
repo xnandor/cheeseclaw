@@ -8,7 +8,7 @@ PROG=cheeseclaw
 PROGPATH=$(BIN)$(PROG)
 CXX=clang++
 CXXFLAGS=
-LIBS=-lSDL2
+LIBS=-lSDL2 -lSDL2_image
 
 # MacOs Specifics
 OS=$(shell uname)
@@ -32,6 +32,6 @@ run: build
 build: $(PROGPATH)
 
 $(PROGPATH): $(SOURCEFILES)
-	$(CXX) $(CXXFLAGS) -I$(INC) -L$(LIB) $(LIBS) $(FRAMEWORKS) $^ -o $@
+	$(CXX) $(CXXFLAGS) -I$(INC) -L$(LIB) -L$(BIN) $(LIBS) $(FRAMEWORKS) $^ -o $@
 
 
