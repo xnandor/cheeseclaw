@@ -8,8 +8,8 @@
 #include <GL/gl.h>
 #endif
 
-#ifndef WINDOW_H
-#define WINDOW_H
+#ifndef CC_WINDOW_H
+#define CC_WINDOW_H
 
 namespace claw {
   

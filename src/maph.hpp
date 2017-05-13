@@ -1,7 +1,5 @@
-
-
-#ifndef MAPH_H
-#define MAPH_H
+#ifndef CC_MAPH_H
+#define CC_MAPH_H
 
 // Can uncomment USE_<LIB> defines to disable library dependencies and support for 3PLs.
 #define MAPH_USE_SDL2
