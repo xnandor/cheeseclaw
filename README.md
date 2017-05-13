@@ -7,13 +7,15 @@ claw::Claw -- memory owner model
 
 claw::Maph   --  vec, mat, rect, union geom
 
-claw::Context
+claw::Window  -- Encapsulates SDL_Window
 
-claw::Component
+claw::Component -- Holds references to windows and surfaces and manages memory with ownership
 
-claw::Window
+claw::Viewport -- Extends component and binds to GL for 3D.
 
-claw::Viewport
+claw::Context -- Used for 2D drawing.
+
+claw::SceneGraph
 
 claw::Room
 
@@ -25,13 +27,11 @@ claw::Mesh
 
 claw::GameLoop
 
-claw::SceneGraph
+claw::Drawable -- pure virtual
 
-claw::Drawable
+claw::Touchable -- pure virtual
 
-claw::Physical
-
-claw::Updater
+claw::Updatable -- pure virtual
 
 # Style
 
